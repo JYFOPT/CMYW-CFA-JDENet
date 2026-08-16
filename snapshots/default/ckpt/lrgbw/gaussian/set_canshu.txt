@@ -1,0 +1,2 @@
+code,batch,slr,alpha,w_zhi,gaussian_weight_size,mlr,cfa_sz
+1,64,1e-3,2.5,0.001,9,2e-4,4x4
