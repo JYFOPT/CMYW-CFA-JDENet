@@ -82,6 +82,7 @@ conda create -n cmyw_jdenet python=3.8
 conda activate cmyw_jdenet
 pip install -r requirements.txt
 
+---
 ### Data Preparation
 Option 1: Synthetic CMYW Data (SIED Dataset)
 We use the SIED dataset for synthetic experiments.
@@ -94,7 +95,7 @@ Convert RGB images to CMYW four-channel images using the linear transformation:
 C = G + B,  M = R + B,  Y = R + G,  W = R + G + B
 Place the preprocessed data in the data/ directory.
 
-
+---
 Option 2: Real CMYW Dataset
 Download our real CMYW dataset from: https://pan.baidu.com/s/1M17r9g9meAIPgnSPSp-kMg?pwd=1111 (Extraction code: 1111)
 
@@ -103,6 +104,7 @@ data/real_cmyw/
 ├── train/          # 466 pairs
 └── test/           # 50 pairs
 
+---
 ### Training
 Train on Synthetic CMYW Data (SIED)
 python train/train_learn_cmyw_to_rgb.py --split 'train' --root ./data/canon
@@ -121,6 +123,7 @@ python train/train_learn_cmyw_to_rgb.py \
 Train on Real CMYW Dataset
 python train/train_learn_cmyw_to_rgb_real.py --split 'train' --root ./data/real_cmyw
 
+---
 ### Testing
 Test on Synthetic Data
 python Test/Test_learn_cmyw_to_rgb.py \
